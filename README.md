@@ -47,9 +47,9 @@ Note: The Java versions used during development are specified in the project's `
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/your-username/weather-app.git
-```
+    ```bash
+      git clone https://github.com/your-username/weather-app.git
+    ```
 
 2. Set up the API key:
 
@@ -60,16 +60,16 @@ git clone https://github.com/your-username/weather-app.git
    ```
 
    Optionally, you can set the API base URL as an environment variable:
-   ```bash
-   export WEATHER_API_BASE_URL=https://api.example.com
-    ```
+     ```bash
+     export WEATHER_API_BASE_URL=https://api.example.com
+      ```
 Alternatively, you can set these environment variables in your preferred way for your development environment.
 
 3. Build and run the Spring Boot backend:
-```bash
- cd weather-app
-./mvnw spring-boot:run
-```
+    ```bash
+     cd weather-app
+    ./mvnw spring-boot:run
+    ```
 
 
 ## Usage
