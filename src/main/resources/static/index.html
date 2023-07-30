@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <!-- Add your CSS styling here -->
+</head>
+<body>
+<div>
+    <h1>Weather App</h1>
+    <form id="weatherForm">
+        <label for="location">Enter Location:</label>
+        <input type="text" id="location" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    <div id="weatherData">
+        <!-- Weather data will be displayed here -->
+    </div>
+</div>
+
+<script>
+    // JavaScript code to handle form submission and display weather data
+    const form = document.getElementById('weatherForm');
+    const weatherDataDiv = document.getElementById('weatherData');
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const location = document.getElementById('location').value;
+        const response = await fetch(`/weather?location=${location}`);
+        const data = await response.json();
+        displayWeatherData(data);
+    });
+
+    function displayWeatherData(weather) {
+        const weatherHTML = `
+            <h2>Location: ${weather.location}</h2>
+            <p>Temperature: ${weather.temperature} °C</p>
+            <p>Humidity: ${weather.humidity}%</p>
+            <p>Weather Condition: ${weather.weatherCondition}</p>
+        `;
+        weatherDataDiv.innerHTML = weatherHTML;
+    }
+</script>
+</body>
+</html>
