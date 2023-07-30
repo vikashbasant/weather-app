@@ -132,5 +132,5 @@ This project is licensed under the MIT License. You can view the full license te
 
 ### Here is Collection Documentation of Postman
 
-[Collection Documentation of Postman](https://documenter.getpostman.com/view/19629540/2s9XxsVGWk)
+[Collection Documentation of Postman](https://documenter.getpostman.com/view/19629540/2s9XxtxFaW)
 
